@@ -2,6 +2,7 @@
 import ConfigParser, sys, os, string
 from pygr.mapping import Collection
 import pygr.Data
+from pygr import logger
 
 config = ConfigParser.ConfigParser({'testOutputBaseDir' : '.', 'smallSampleKey': ''})
 config.read([ os.path.join(os.path.expanduser('~'), '.pygrrc'), os.path.join(os.path.expanduser('~'), 'pygr.cfg'), '.pygrrc', 'pygr.cfg' ])
@@ -300,7 +301,10 @@ class Build_Test(PygrBuildNLMSAMegabase):
                             tmpslice2 = tmpelement.sequence # FOR REAL ELEMENT COORDINATE
                             wlist2 = wlist1 + (tmpelement.ucsc_id, tmpelement.gene_id, tmpslice2.start, tmpslice2.stop)
                             slicestart, sliceend = max(tmp.start, tmp2.start), min(tmp.stop, tmp2.stop)
-                            if slicestart < 0 or sliceend < 0: sys.exit('wrong query')
+                            if slicestart < 0 or sliceend < 0:
+                                logger.warn('NEGATIVE COORDINATES IN SLICE OBJECT: %d %s %d %d' % \
+                                    (tmpelement.ucsc_id, tmpelement.gene_id, tmpslice2.start, tmpslice2.stop))
+                                continue
                             tmp1 = msa.seqDict['hg18.' + chrid][slicestart:sliceend]
                             edges = msa[tmp1].edges()
                             for src, dest, e in edges:
@@ -356,7 +360,10 @@ class Build_Test(PygrBuildNLMSAMegabase):
                             tmpslice2 = tmpelement.sequence # FOR REAL ELEMENT COORDINATE
                             wlist2 = wlist1 + (tmpelement.ucsc_id, tmpelement.gene_id, tmpslice2.start, tmpslice2.stop)
                             slicestart, sliceend = max(tmp.start, tmp2.start), min(tmp.stop, tmp2.stop)
-                            if slicestart < 0 or sliceend < 0: sys.exit('wrong query')
+                            if slicestart < 0 or sliceend < 0:
+                                logger.warn('NEGATIVE COORDINATES IN SLICE OBJECT: %d %s %d %d' % \
+                                    (tmpelement.ucsc_id, tmpelement.gene_id, tmpslice2.start, tmpslice2.stop))
+                                continue
                             tmp1 = msa.seqDict['hg18.' + chrid][slicestart:sliceend]
                             edges = msa[tmp1].edges()
                             for src, dest, e in edges:
