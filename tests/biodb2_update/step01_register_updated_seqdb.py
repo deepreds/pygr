@@ -28,7 +28,7 @@ sprotDict = {
     'ponAbe2': 'PONAB', 'vicPac1': 'LAMPA', 'choHof1': 'CHOHO', 'micMur1': 'MICMU', 'speTri1': 'SPETR',
     'loxAfr2': 'LOXAF', 'turTru1': 'TURTR', 'ochPri2': 'OCHPR', 'gorGor1': 'GORGO', 'proCap1': 'PROCA',
     'tarSyr1': 'TARSY', 'pteVam1': 'PTEVA', 'taeGut1': 'TAEGU', 'myoLuc1': 'MYOLU', 'equCab2': 'HORSE',
-    'oryLat2': 'ORYLA'
+    'oryLat2': 'ORYLA', 'cavPor3': 'CAVPO', 'petMar1': 'PETMA'
     }
 
 # NAME OF THE GENOME AND ASSEMBLY DATE FROM UCSC GENOME BROWSER, MULTIGENOME ALIGNMENT INFORMATION
@@ -44,6 +44,7 @@ docstringdict = {
     'calJac1':'Marmoset Genome (June 2007)',
     'canFam2':'Dog Genome (May 2005)',
     'cavPor2':'Guinea Pig (October 2005)',
+    'cavPor3':'Guinea Pig (February 2008)',
     'cb3':'C. briggsae Genome (January 2007)',
     'ce2':'C. elegans Genome (March 2004)',
     'ce4':'C. elegans Genome (January 2007)',
@@ -113,6 +114,7 @@ docstringdict = {
     'otoGar1':'Bushbaby Genome (December 2006)',
     'panTro1':'Chimpanzee Genome (November 2003)',
     'panTro2':'Chimpanzee Genome (March 2006)',
+    'petMar1':'Lamprey Genome (March 2007)',
     'ponAbe2':'Orangutan Genome (July 2007)',
     'priPac1':'P. pacificus Genome (February 2007)',
     'proCap1':'Rock hyrax Genome (July 2008)',
