@@ -5,9 +5,9 @@
 import os, sys
 from pygr import cnestedlist, seqdb, metabase
 
-os.environ['PYGRDATAPATH'] = '/data/server'
+pygrDir = '/data/server'
 
-mdb = metabase.MetabaseList(os.environ['PYGRDATAPATH'])
+mdb = metabase.MetabaseList(pygrDir)
 
 for ix in mdb.dir('Bio'):
     if '.txt' in ix: continue
