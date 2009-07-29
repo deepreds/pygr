@@ -29,7 +29,7 @@ sprotDict = {
     'loxAfr2': 'LOXAF', 'turTru1': 'TURTR', 'ochPri2': 'OCHPR', 'gorGor1': 'GORGO', 'proCap1': 'PROCA',
     'tarSyr1': 'TARSY', 'pteVam1': 'PTEVA', 'taeGut1': 'TAEGU', 'myoLuc1': 'MYOLU', 'equCab2': 'HORSE',
     'oryLat2': 'ORYLA', 'cavPor3': 'CAVPO', 'petMar1': 'PETMA', 'braFlo1': 'BRAFL', 'caeJap1': 'CAEJA',
-    'caePb1': 'CAEPB', 'caePb2': 'CAEPB', 'caeRem3': 'CAERE'
+    'caePb1': 'CAEPB', 'caePb2': 'CAEPB', 'caeRem3': 'CAERE', 'ce6': 'CAEEL'
     }
 
 # NAME OF THE GENOME AND ASSEMBLY DATE FROM UCSC GENOME BROWSER, MULTIGENOME ALIGNMENT INFORMATION
@@ -54,6 +54,7 @@ docstringdict = {
     'cb3':'C. briggsae Genome (January 2007)',
     'ce2':'C. elegans Genome (March 2004)',
     'ce4':'C. elegans Genome (January 2007)',
+    'ce6':'C. elegans Genome (May 2008)',
     'choHof1':'Sloth Genome (July 2008)',
     'ci2': 'C. intestinalis Genome (March 2005)',
     'danRer1':'Zebrafish Genome (November 2003)',

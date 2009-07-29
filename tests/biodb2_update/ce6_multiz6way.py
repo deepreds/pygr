@@ -12,7 +12,7 @@ if len(args) != 2:
 
 # SEQUENCE LIST SHOULD BE UPDATED. ALSO, THE NAME OF THE SCRIPT SHOULD BE COINCIDE WITH NLMSA NAME.
 # E.G. hg18_multiz44way
-seqlist = ['ce6', 'caeRem3', 'cb3', 'caePb1', 'caeJap1', 'priPac1']
+seqlist = ['ce6', 'caeRem3', 'cb3', 'caePb2', 'caeJap1', 'priPac1']
 
 pygrDir = '/data/server'
 os.environ['WORLDBASEPATH'] = pygrDir
