@@ -28,7 +28,8 @@ sprotDict = {
     'ponAbe2': 'PONAB', 'vicPac1': 'LAMPA', 'choHof1': 'CHOHO', 'micMur1': 'MICMU', 'speTri1': 'SPETR',
     'loxAfr2': 'LOXAF', 'turTru1': 'TURTR', 'ochPri2': 'OCHPR', 'gorGor1': 'GORGO', 'proCap1': 'PROCA',
     'tarSyr1': 'TARSY', 'pteVam1': 'PTEVA', 'taeGut1': 'TAEGU', 'myoLuc1': 'MYOLU', 'equCab2': 'HORSE',
-    'oryLat2': 'ORYLA', 'cavPor3': 'CAVPO', 'petMar1': 'PETMA'
+    'oryLat2': 'ORYLA', 'cavPor3': 'CAVPO', 'petMar1': 'PETMA', 'braFlo1': 'BRAFL', 'caeJap1': 'CAEJA',
+    'caePb1': 'CAEPB', 'caePb2': 'CAEPB', 'caeRem3': 'CAERE'
     }
 
 # NAME OF THE GENOME AND ASSEMBLY DATE FROM UCSC GENOME BROWSER, MULTIGENOME ALIGNMENT INFORMATION
@@ -40,7 +41,12 @@ docstringdict = {
     'bosTau2':'Cow Genome (March 2005)',
     'bosTau3':'Cow Genome (August 2006)',
     'bosTau4':'Cow Genome (October 2007)',
+    'braFlo1':'Lancelet genome (March 2006)',
+    'caeJap1':'C. japonica genome (March 2008)',
+    'caePb1':'C. brenneri Genome (July 2007)',
+    'caePb2':'C. brenneri Genome (February 2008)',
     'caeRem2':'C. remanei Genome (March 2006)',
+    'caeRem3':'C. remanei Genome (May 2007)',
     'calJac1':'Marmoset Genome (June 2007)',
     'canFam2':'Dog Genome (May 2005)',
     'cavPor2':'Guinea Pig (October 2005)',
