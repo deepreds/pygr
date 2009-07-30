@@ -145,33 +145,30 @@ docstringdict = {
     'xenTro2':'X. tropicalis Genome (August 2005)'
     }
 
-args = sys.argv
-if len(args) != 2:
-    print 'Usage:', args[0], 'dummy'
-    sys.exit()
+if __name__ == '__main__':
 
-pygrDir = '/data/server'
-dnDb = '/data/server/downloadable/.pygr_data'
-seqdir = '/data/GENOMES'
-msadir = '/data/NLMSA'
+    pygrDir = '/data/server'
+    dnDb = '/data/server/downloadable/.pygr_data'
+    seqdir = '/data/GENOMES'
+    msadir = '/data/NLMSA'
 
-mdb = metabase.MetabaseList(pygrDir)
-genomeList = [ix for ix in mdb.dir('Bio.Seq.Genome') if ix[-6:] != '.fasta' and ix[-4:] != '.txt']
+    mdb = metabase.MetabaseList(pygrDir)
+    genomeList = [ix for ix in mdb.dir('Bio.Seq.Genome') if ix[-6:] != '.fasta' and ix[-4:] != '.txt']
 
-seqlist = glob.glob(os.path.join(seqdir, '*.seqlen'))
-for seqname in seqlist:
-    genoname = os.path.basename(seqname)[:-7]
-    # UPDATE EACH TIME IT EXITS
-    if not docstringdict.has_key(genoname) or not sprotDict.has_key(genoname):
-        sys.exit('NO DOCSTRING: %s' % genoname)
-    resourceName = 'Bio.Seq.Genome.' + sprotDict[genoname] + '.' + genoname
-    if resourceName in genomeList: continue
-    print 'NOT REGISTERED: %s' % genoname
-    genome = seqdb.SequenceFileDB(os.path.join(seqdir, genoname))
-    genome.__doc__ = docstringdict[genoname]
-    mdb.add_resource(resourceName, genome)
-    print genoname + '\t' + 'Bio.Seq.Genome.' + sprotDict[genoname] + '.' + genoname + '\tREGISTERED'
-    mdb.commit()
+    seqlist = glob.glob(os.path.join(seqdir, '*.seqlen'))
+    for seqname in seqlist:
+        genoname = os.path.basename(seqname)[:-7]
+        # UPDATE EACH TIME IT EXITS
+        if not docstringdict.has_key(genoname) or not sprotDict.has_key(genoname):
+            sys.exit('NO DOCSTRING: %s' % genoname)
+        resourceName = 'Bio.Seq.Genome.' + sprotDict[genoname] + '.' + genoname
+        if resourceName in genomeList: continue
+        print 'NOT REGISTERED: %s' % genoname
+        genome = seqdb.SequenceFileDB(os.path.join(seqdir, genoname))
+        genome.__doc__ = docstringdict[genoname]
+        mdb.add_resource(resourceName, genome)
+        print genoname + '\t' + 'Bio.Seq.Genome.' + sprotDict[genoname] + '.' + genoname + '\tREGISTERED'
+        mdb.commit()
 
-print 'SEQDB REGISTRATION DONE'
+    print 'SEQDB REGISTRATION DONE'
 
