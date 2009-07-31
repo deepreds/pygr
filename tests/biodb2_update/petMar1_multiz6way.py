@@ -41,7 +41,6 @@ maflist.sort()
 os.system('rm -f ' + os.path.join(msadir, os.path.basename(mafdir)) + '*')
 
 msa = cnestedlist.NLMSA(os.path.join(msadir, os.path.basename(mafdir)), 'w', genomeUnion, maflist)
-#msa = cnestedlist.NLMSA(os.path.join(msadir, os.path.basename(mafdir)), 'r', genomeUnion)
 msa.save_seq_dict()
 
 myorg, mymultiz = string.split(os.path.basename(args[0])[:-3], '_')

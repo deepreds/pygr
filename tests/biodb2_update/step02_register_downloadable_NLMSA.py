@@ -42,9 +42,9 @@ for genoname, pygrname in registerDict.items():
     newurl = '%s/%s.txt.gz' % (srcUrl, genoname)
     dfile = SourceURL(newurl)
     dfile.__doc__ = genoname + '.txt in textfile dump format'
-    mdb1.add_resource('Bio.MSA.UCSC.' + genoname + '.txt', dfile)
+    mdb2.add_resource('Bio.MSA.UCSC.' + genoname + '.txt', dfile)
     nbuilder = NLMSABuilder(dfile)
     nbuilder.__doc__ = genoname + ' multigenome alignment from UCSC genome browser'
-    mdb1.add_resource('Bio.MSA.UCSC.' + genoname, nbuilder)
-    mdb1.commit()
+    mdb2.add_resource('Bio.MSA.UCSC.' + genoname, nbuilder)
+    mdb2.commit()
 
