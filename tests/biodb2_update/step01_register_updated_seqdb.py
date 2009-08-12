@@ -29,7 +29,8 @@ sprotDict = {
     'loxAfr2': 'LOXAF', 'turTru1': 'TURTR', 'ochPri2': 'OCHPR', 'gorGor1': 'GORGO', 'proCap1': 'PROCA',
     'tarSyr1': 'TARSY', 'pteVam1': 'PTEVA', 'taeGut1': 'TAEGU', 'myoLuc1': 'MYOLU', 'equCab2': 'HORSE',
     'oryLat2': 'ORYLA', 'cavPor3': 'CAVPO', 'petMar1': 'PETMA', 'braFlo1': 'BRAFL', 'caeJap1': 'CAEJA',
-    'caePb1': 'CAEPB', 'caePb2': 'CAEPB', 'caeRem3': 'CAERE', 'ce6': 'CAEEL'
+    'caePb1': 'CAEPB', 'caePb2': 'CAEPB', 'caeRem3': 'CAERE', 'ce6': 'CAEEL', 'hg19': 'HUMAN',
+    'strPur2': 'STRPU'
     }
 
 # NAME OF THE GENOME AND ASSEMBLY DATE FROM UCSC GENOME BROWSER, MULTIGENOME ALIGNMENT INFORMATION
@@ -101,6 +102,7 @@ docstringdict = {
     'gorGor1':'Gorilla Genome (October 2008)',
     'hg17':'Human Genome (May 2004)',
     'hg18':'Human Genome (May 2006)',
+    'hg19':'Human Genome (Febuary 2009)',
     'loxAfr1':'Elephant Genome (May 2005)',
     'loxAfr2':'Elephant Genome (July 2008)',
     'micMur1':'Mouse lemur Genome (June 2003)',
@@ -134,6 +136,7 @@ docstringdict = {
     'sorAra1':'Shrew (Junuary 2006)',
     'speTri1':'Squirrel Genome (Febuary 2008)',
     'strPur1':'S. purpuratus Genome (April 2005)',
+    'strPur2':'S. purpuratus Genome (September 2006)',
     'taeGut1':'Zebra finch Genome (July 2008)',
     'tarSyr1':'Tarsier Genome (August 2008)',
     'tetNig1':'Tetraodon Genome (February 2004)',

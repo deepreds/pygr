@@ -40,14 +40,24 @@ for pygrstr in genomeList:
 
 genomes = {}
 for orgstr in seqlist:
-    genomes[orgstr] = mdb(genoDict[orgstr])
+    try:
+        genomes[orgstr] = mdb(genoDict[orgstr])
+    except:
+        print 'GENOME ASSEMBLY NOT REGISTERED: %s' % orgstr
+        pass
+if len(genomes) not in (1, 2): sys.exit()
 
 genomeUnion = seqdb.PrefixUnionDict(genomes)
 
 os.system('gzip -d %s' % os.path.join(inputDir, 'axtNet/*.net.axt.gz'))
 axtList = glob.glob(os.path.join(inputDir, 'axtNet/*.net.axt'))
+if len(axtList) == 0:
+    os.system('gzip -d %s' % os.path.join(inputDir, '*.net.axt.gz'))
+    axtList = glob.glob(os.path.join(inputDir, '*.net.axt'))
 
-if len(seqlist):
+if len(axtList) == 0: sys.exit('AXTNET FILE NOT FOUND: %s' % args[1])
+
+if len(seqlist) == 1:
     msaname = '%s_pairwise%s' % (seqdb1, 'Self')
 else:
     msaname = '%s_pairwise%s' % (seqdb1, seqdb2[0].upper() + seqdb2[1:])

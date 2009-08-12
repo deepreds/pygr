@@ -49,6 +49,8 @@ q = 'scp -r %s/* %s' % (compressDir, scpDir)
 print q
 #os.system(q)
 
+print registerDict
+
 while 1:
     x = raw_input('Copy Finished: Press 1 Key')
     if x == '1': break
