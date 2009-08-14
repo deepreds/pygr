@@ -48,6 +48,7 @@ for genoname, pygrname in registerDict.items():
     mdb2.add_resource('Bio.MSA.UCSC.' + genoname, nbuilder)
     mdb2.commit()
 
+    msa = cnestedlist.NLMSA(os.path.join(msaDir, genoname), 'r')
     msa.__doc__ = '%s pairwise alignment with %s from UCSC genome browser' % (genome1, genome2)
     mdb1.add_resource('Bio.MSA.UCSC.' + genoname, msa)
     mdb1.commit()
