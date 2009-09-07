@@ -33,6 +33,8 @@ sprotDict = {
     'strPur2': 'STRPU'
     }
 
+# PONAB  -> PONPA TEMPORARILY
+
 # NAME OF THE GENOME AND ASSEMBLY DATE FROM UCSC GENOME BROWSER, MULTIGENOME ALIGNMENT INFORMATION
 docstringdict = {
     'anoCar1':'Lizard Genome (January 2007)',
